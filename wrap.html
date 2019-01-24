@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yurenotschka</title>
+<meta charset="UTF-8">
+<style>
+.wrapper { 
+display: grid; 
+grid-template-columns: repeat 2fr repeat (2, 1fr); 
+grid-auto-rows: 1fr 1fr 2fr 2fr;
+grid-column-gap: 2px;
+grid-row-gap:  2px;
+grid-auto-rows: minmax(100px, auto);}
+ 
+.box1 { 
+grid-column-start: 1; 
+grid-row-start: 1; 
+grid-row-end: 5; 
+background: LightSteelBlue;
+padding: 10px;
+}
+.box2 { 
+grid-column-start: 2; 
+grid-row-start: 1; 
+grid-row-end:2 ; 
+background:Purple;
+padding: 10px;
+}
+.box3 { 
+grid-column-start: 3; 
+grid-row-start: 1; 
+grid-row-end:2 ; 
+background:Orchid;
+padding: 10px;
+}
+
+.box4 { 
+grid-column-start:2 ; 
+grid-column-end:4 ; 
+grid-row-start:2 ; 
+grid-row-end:3;
+background:Lavender; 
+padding: 10px;
+}
+
+.box5 { 
+grid-column-start:2 ; 
+grid-row-start:3 ; 
+grid-row-end:5 ; 
+background:CadetBlue;
+padding: 10px;
+}
+
+.box6 { 
+grid-column-start:3 ; 
+grid-row-start:3; 
+grid-row-end:4 ; 
+background:Indigo;
+padding: 10px;
+}
+
+.box7 { 
+grid-column-start:3 ; 
+grid-row-start:4 ; 
+grid-row-end:5 ; 
+background:Thistle;
+padding: 10px;
+}
+
+
+</style>
+</head>
+<body>
+	<div class="wrapper">
+			<div class="box1">	
+				<h1>Я - заголовок 1 рівня</h1>
+				<img scr="https://cdn.pixabay.com/photo/2018/08/03/14/50/flamingo-3582047_960_720.jpg" style ="float: left;">
+				<div style="background: pink: width: 15px; height"></div>
+
+			</div>
+			<div class="box2"> <p>Головна</p></div>
+			<div class="box3"> <p>Новини</p></div>
+			<div class="box4"><h2>Я - заголовок 2 рівня</h2> </div>
+			<div class="box5"> </div>
+			<div class="box6"> <p Loren</div>
+			<div class="box7"> Loren</div>
+	</div>
+</body>
+</html>
