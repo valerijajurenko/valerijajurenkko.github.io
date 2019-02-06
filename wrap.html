@@ -6,8 +6,8 @@
 <style>
 .wrapper { 
 display: grid; 
-grid-template-columns: repeat 2fr repeat (2, 1fr); 
-grid-auto-rows: 1fr 1fr 2fr 2fr;
+grid-template-columns: 50% 25% 25%; 
+grid-auto-rows: 15% 15% 35% 35%;
 grid-column-gap: 2px;
 grid-row-gap:  2px;
 grid-auto-rows: minmax(100px, auto);}
@@ -33,7 +33,6 @@ grid-row-end:2 ;
 background:Orchid;
 padding: 10px;
 }
-
 .box4 { 
 grid-column-start:2 ; 
 grid-column-end:4 ; 
@@ -42,15 +41,11 @@ grid-row-end:3;
 background:Lavender; 
 padding: 10px;
 }
-
 .box5 { 
 grid-column-start:2 ; 
 grid-row-start:3 ; 
 grid-row-end:5 ; 
-background:CadetBlue;
-padding: 10px;
-}
-
+background:CadetBlue;}
 .box6 { 
 grid-column-start:3 ; 
 grid-row-start:3; 
@@ -58,7 +53,6 @@ grid-row-end:4 ;
 background:Indigo;
 padding: 10px;
 }
-
 .box7 { 
 grid-column-start:3 ; 
 grid-row-start:4 ; 
@@ -66,24 +60,65 @@ grid-row-end:5 ;
 background:Thistle;
 padding: 10px;
 }
+img {margin: 20px;
+	width: 200px;
+	float: left;}
+p{font-size: 18pt;
+  }
+@media screen and (max-width: 360px) 
+	{body { background: MistyRose;
+			font-size: 16pt; 
+			font-family: 'Anton', sans-serif;}
+		.wrapper{
+			display: grid; 
+			grid-template-columns: 50% 50%;
+			grid-column-gap: 0px;
+          	grid-auto-rows: minmax(200px, auto);}
+		.d1{grid-column:1 / 3;  
+			grid-row: 2 / 4 ;}
+		.d2 {grid-column: 2/3;
+		grid-row: 1/2;
+		background: #FE2EC8; }
+		.d3{
+			grid-column:  1 / 2;
+			grid-row: 1 / 2 ;
+			background: lightgreen;}
+		.d4{grid-column: 1/3;
+			grid-row: 3/4;
+			background: pink; }
+		.d5{grid-column: 2/3;
+			grid-row: 5/6;
+			background: lightgreen; }
+		.d6{grid-column: 2/3;
+			grid-row: 4/5;
+			background: red; }
+		.d7{grid-column: 1/2;
+			grid-row: 4/6;
+			background: lightblue; }}
+		
+		.
 
 
+  input{float:right;}
 </style>
 </head>
 <body>
 	<div class="wrapper">
 			<div class="box1">	
-				<h1>Я - заголовок 1 рівня</h1>
-				<img scr="https://cdn.pixabay.com/photo/2018/08/03/14/50/flamingo-3582047_960_720.jpg" style ="float: left;">
-				<div style="background: pink: width: 15px; height"></div>
+				<h1 style="text-align: center;">Я - заголовок 1 рівня</h1>
 
+				<p><img src="https://mirpozitiva.ru/uploads/posts/2016-09/medium/1474011210_15.jpg">
+				Коли на вулиці осінь, про теплий плед мріють не лише люди, але і пухнастики також.</p>
+				<p>Коли на дворі стає прохолодно, усі мрії лише про теплий дім, затишне ліжко, мягкий плед та горня какао. Не мерзніть! Поки ви ще на роботі чи навчанні, зігрітись вам допоможуть ось ці чудові тваринки, по самі вуха закухаті у пухкі пледи.</p>
+				<p>Просто подивіться на малюків, які солодко ніжаються вдома і вам одразу стане тепліше!</p>
+					<input type="buttom" style="background:MidnightBlue; color: white; font-size: 30px; text-align: center;" value="Knopka"> 
 			</div>
-			<div class="box2"> <p>Головна</p></div>
-			<div class="box3"> <p>Новини</p></div>
-			<div class="box4"><h2>Я - заголовок 2 рівня</h2> </div>
-			<div class="box5"> </div>
-			<div class="box6"> <p Loren</div>
-			<div class="box7"> Loren</div>
+			<div class="box2"> <p style="text-align: center; color: white; font-size: 35px; ">Головна</p></div>
+			<div class="box3"> <p style="text-align: center; color: white; font-size: 35px; ">Новини</p></div>
+			<div class="box4"><h2 style="text-align: center" >Я - заголовок 2 рівня</h2> </div>
+			<div class="box5"><img src="https://i.pinimg.com/originals/cd/16/60/cd1660369d69fa42bb508d8bc80dfe2a.jpg" style="width: 220px; height: 320px;	margin-left: 130px;" ></div>
+			<div class="box6"> <p> Ці тваринки кого завгодно з розуму зведуть. Неможливо ж бути настільки милими і чарівними?! До Твоєї уваги чергова порція мі-мі-мі. Гей, малюк, у Тебе хоча б кістки є?</div>
+			<div class="box7"><p>Чи знаєш Ти, друже, що зворушливі фото малюків тварин неабияк піднімають настрій та підвищують працездатність? Виявили це зовсім випадково дослідники з Університету Хіросіми у 2009 році.</p> </div>
 	</div>
 </body>
 </html>
