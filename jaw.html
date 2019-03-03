@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yurenotschka</title>
+</head>
+<body>
+	<script>
+    function someFunc() {
+	var newWin = window.open('about:blank', 'example', 'width=600,height=400,top=20,left=200');
+	
+      var result = `Прізвище: ${document.getElementById("pr").value} <br>`;
+					`Імя: ${document.getElementById("im").value} <br>`;
+					`По батькові: ${document.getElementById("pb").value} <br>`;
+                  `Дата народження: ${document.getElementById("da").value} <br>`;
+                  `Адреса: ${document.getElementById("ad").value} <br>`;
+     result += `Номер телефонy: ${document.getElementById("tel").value} <br>`; 
+	 
+	 var kom = document.getElementById("kom");
+        if (kom.checked) {
+          result += 'Навчання на комерційній основі <br>'`;
+        }
+      var sumOfMarks = mat(document.getElementById("math").value) + mov(document.getElementById("mova").value);
+                Сума oцінок: ${sumOfMarks} <br>;
+				
+      var genderValues = document.getElementsByName("choise");
+      if(choiseValues[0].checked){
+        result += 'Стать: Жіноча';
+      } else if(choiseValues[1].checked){
+        result += 'Стать: Чоловіча';
+      }
+      
+      Win.document.write(result);
+    }
+
+    function someFunc2() {
+      Win.close();
+    }
+	</script>
+	
+	<div>
+	
+		<h1>Форма опитування</h1>
+		<p><input type="text" placeholder="Ваше прізвище" id="pr" ></p>
+		<p><input type="text" placeholder="Ім'я" id="im" ></p>
+		<p><input type="text" placeholder="По батькові" id="pb"></p>
+		<p><input type="date" id="da" ></p>
+		<p><input type="text" placeholder="Адреса" id="ad"></p>
+		<p><input type="text" placeholder="Номер телефону" id="tel"></p>
+		<p><input type="checkbox" checked id="kom"> Навчання на  комерційній основі</p>
+		<p><h3>Уведіть ваші оцінки</h3>
+			<input type="text" placeholder="Математика" id="mat">
+			<input type="text" placeholder="Українcька мова" id="mov"></p>
+
+		<p><h3>Стать</h3>
+			<input type="radio" name="choise" checked id="tsch"> Чоловіча
+			<input type="radio" name="choise" checked id="shi"> Жіноча
+		</p>
+		<p><p>Виберіть фото</p>
+		<input type="file"></p>
+		<p><input type="button" value="Перевірити дані" onclick="someFunc()"> </p>
+	</div>
+</body>
+</html>
