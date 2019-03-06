@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Yurenotschka</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+		function check() {
+		var i=0;
+		if(document.test.vopr1.value=="Булінг" || document.test.vopr1.value=="булінг") i++;
+		if(document.test.vopr2.value=="Так" || document.test.vopr2.value=="так") i++;
+		if(document.test.vopr3[0].checked) i++;
+		if(document.test.vopr4[2].checked) i++;
+		if(!document.test.vopr5[2].checked && !document.test.vopr5[4].checked && document.test. vopr5[0].checked && document.test.vopr5[1].checked && document.test.vopr5[3].checked) i++;
+		if(!document.test.vopr6[1].checked && document.test. vopr6[0].checked && document.test.vopr6[2].checked) i++;
+		if(document.test.vopr7.value=="3") i++;
+		if(document.test.vopr8.value=="2") i++;
+
+var p = document.getElementById('vse')
+p.innerHTML = "Правильних відповідей -" + i;
+}
+</script>
+
+		<form name="test" style="margin-left: 350px; margin-top: 50px">
+		<p>1. Цькування однієї дитини іншою, агресивне переслідування, яке часто поширене в школах - це  ... <input type="text" name="vopr1"></p>
+
+		<p>2. Чи існують в українському законодавстві нормативно-праввові акти, які регулюють булінг? <input type="text" name="vopr2"></p>
+
+
+		<p>3. Коли прийнятий закон про булінг?</p>
+											 <p> <input type="radio" name="vopr3">18.12.2018<br>
+											   <input type="radio" name="vopr3">20.11.2018<br>
+											  <input type="radio" name="vopr3">20.12.2018<br>
+
+		<p>4. Номер законопроекту?</p>
+											 <p> <input type="radio" name="vopr4">2765-VIII<br>
+											   <input type="radio" name="vopr4">2567-VIV<br>
+											  <input type="radio" name="vopr4">2657-VIII<br></p> 
+
+			<p>Види булінгу:</p>
+								<p> <input type="checkbox" name="vopr5">Фізичний<br>
+								<input type="checkbox" name="vopr5">Економічний<br>
+								<input type="checkbox" name="vopr5">Лінгвістичний<br>
+								<input type="checkbox" name="vopr5">Психологічний<br>
+								<input type="checkbox" name="vopr5">Термічний<br></p>
+
+			<p>Психологічний тиск це:</p>
+								<p><input type="checkbox" name="vopr6">Oбрази<br>
+								<input type="checkbox" name="vopr6">Yдари<br>
+								<input type="checkbox" name="vopr6">Приниження<br></p>
+
+			<p>Скільки дітей за статистикою страждає від булінгу?</p>
+					<p><select name="vopr7"> <option value="1">100%
+											 <option value="2">90%
+											 <option value="3">80%
+			</select></p>
+
+			<p>Скільки дітей ні з ким, зокрема і з батьками, не діляться своїми проблемами (за дослідженнями UNISEF)</p>
+			<p><select name="vopr8"> <option value="1">55%
+									<option value="2">44%
+									<option value="3">33%
+			</select></p>
+
+			<input type="button" value="Перевірити" onclick="check()">
+			<p id="vse">Кількість правильних відповідей - </p>
+		</form>
+	</body>
+</html>
