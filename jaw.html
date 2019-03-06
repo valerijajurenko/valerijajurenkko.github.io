@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yurenotschka</title>
+</head>
+<body>
+
+ <div>
+  <h1>Форма опитування</h1>
+  <p><input type="text" placeholder="Ваше прізвище" id="pr" ></p>
+  <p><input type="text" placeholder="Ім'я" id="im" ></p>
+  <p><input type="text" placeholder="По батькові" id="pb"></p>
+  <p><input type="date" id="da" ></p>
+  <p><input type="text" placeholder="Адреса" id="ad"></p>
+  <p><input type="text" placeholder="Номер телефону" id="tel"></p>
+  <p><input type="checkbox" checked id="kom"> Навчання на  комерційній основі</p>
+  <p><h3>Уведіть ваші оцінки</h3>
+   <input type="text" placeholder="Математика" id="mat">
+   <input type="text" placeholder="Українcька мова" id="mov"></p>
+
+  <p><h3>Стать</h3>
+   <input type="radio" name="choise" checked id="tsch"> Чоловіча
+   <input type="radio" name="choise" checked id="shi"> Жіноча
+  </p>
+  <p><p>Виберіть фото</p>
+  <input type="file"></p>
+  <p><input type="button" value="Перевірити дані" onclick="someFunc() "></p>
+ </div>
+
+
+<script>
+
+    function someFunc() {
+        var newWin = window.open('about:blank', 'example', 'width=600,height=400,top=20,left=200');
+
+        //Прізвище
+        var pr = document.getElementById("pr").value;
+
+        //Ім'я
+        var im = document.getElementById("im").value;
+
+        //По батькові
+        var pb = document.getElementById("pb").value;
+
+        //Дата народження
+        var da = document.getElementById("da").value;
+
+        //Адреса
+        var ad = document.getElementById("ad").value;
+
+        //Номер телефону
+        var tel = document.getElementById("tel").value;
+
+        //Навчання на комерційній основі
+        var kom = '';
+        if (document.getElementById("kom").checked == true) {
+            kom = "комерційній основі";
+        }
+        else {
+            kom = "бюджетній основі";
+        }
+
+        //Сума оцінок
+        var sum = Number(document.getElementById("mat").value) + Number(document.getElementById("mov").value);
+
+        //Стать
+        var stat = '';
+        if (document.getElementById("tsch").checked == true) {
+            stat = "чоловіча";
+        }
+        else {
+            stat = "жіноча";
+        }
+
+        newWin.document.write("Ваше прізвище : " + pr + "<br>" + 
+                                "Ваше ім'я : " + im + "<br>" + 
+                                "Ваше ім'я по батькові : " + pb + "<br>" + 
+                                "Ваша дата народження : " + da + "<br>" + 
+                                "Ваша адреса : " + ad + "<br>" + 
+                                "Ваш номер телефону : " + tel + "<br>" + 
+                                "Ви плануєте навчатися на : " + kom + "<br>" + 
+                                "Ваша сума оцінок : " + sum + "<br>" + 
+                                "Ваша стать : " + stat + "<br>");
+
+    }
+
+</script>
+
+
+
+</body>
+</html>
